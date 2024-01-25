@@ -1,0 +1,38 @@
+package com.example.interactivestorybook;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class page2 extends AppCompatActivity {
+    TextView hello;
+    String pangalan;
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_page2);
+        hello = findViewById(R.id.hello);
+        Intent i = getIntent();
+        pangalan = getIntent().getStringExtra("name");
+        hello.setText(pangalan + " got an invitation to a birthday dance party.");
+    }
+
+    public void goToMainActivity(View view) {
+        Intent i = getIntent();
+        Intent intent = new Intent(this, com.example.interactivestorybook;MainActivity.class);
+        intent.putExtras(i);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToPage3(View view) {
+        Intent i = getIntent();
+        Intent intent = new Intent(this, Page3.class);
+        intent.putExtras(i);
+        startActivity(intent);
+        finish();
+    }
+}
