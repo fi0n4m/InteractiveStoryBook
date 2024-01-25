@@ -1,0 +1,37 @@
+package com.example.interactivestorybook;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+
+public class Page3 extends AppCompatActivity {
+    TextView hello;
+    String pangalan;
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_page3);
+        hello = findViewById(R.id.hello);
+        Intent i = getIntent();
+        pangalan = getIntent().getStringExtra("name");
+        hello.setText("Subalit may isang gulay na umusbong na kakaiba ang anyo, siya si " +pangalan+ " na may maputlang maputlang kulay, at ang kanyang lasang taglay ay di maipaliwanag.");
+    }
+    public void goTopage2(View view) {
+        Intent i = getIntent();
+        Intent intent = new Intent(this, com.example.interactivestorybook;page2.class);
+        intent.putExtras(i);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToPage4(View view) {
+        Intent i = getIntent();
+        Intent intent = new Intent(this, Page4.class);
+        intent.putExtras(i);
+        startActivity(intent);
+        finish();
+    }
+}
