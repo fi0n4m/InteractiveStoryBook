@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+    android:background="@drawable/three"
+    tools:context=".Page3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="Subalit may isang gulay na umusbong na kakaiba ang anyo, siya si Ampalaya na may maputlang maputlang kulay, at ang kanyang lasang taglay ay di maipaliwanag."
+        android:id="@+id/hello"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:textSize = "15dp"
+        android:textColor="#0C0C0C"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:onClick="goToPage2"
+        android:backgroundTint="#7F2B2B"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="100dp"
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="#050505"
+        android:textSize="15dp"
+        android:onClick="goToPage2"
+        android:backgroundTint="#7F2B2B"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="300dp" >
+
+</LinearLayout>
